@@ -28,10 +28,23 @@ public class ArrayOfString {
                System.out.println(temp);
            }
         }
-        System.out.println("-".repeat(100));
+        System.out.println("names containing a");
+        // print all the names that contains 'a'
+        for (int i = 0; i < nameOfStudents.length; i++) {
+            if (nameOfStudents[i].contains("a")) {
+                System.out.println(nameOfStudents[i]);
+            }
+        }
+        // print all the student names, whose first names are ending with a
 
+        // split(String regex) -> return an Array of String
+        System.out.println("*".repeat(50));
         for (String name : nameOfStudents) {
-            System.out.println(name.trim());
+            // split
+            String[] tempSplit = name.split(" ");
+            if (tempSplit[0].endsWith("a")) {
+                System.out.println(name);
+            }
         }
     }
 }
