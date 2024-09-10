@@ -24,8 +24,8 @@ public class StringPracticeQuestion2 {
                 "shanawaz alam", "Raman Jatav", "Aditya Tanwani", "Mohd Nadir Ansari", "Deepika Patel", "Megha thakre",
                 "Dharam singh" };
         int count = 0;
-        for (String element : names) {
-            if (element.startsWith("a") ||
+
+           /* if (element.startsWith("a") ||
                     element.startsWith("e") ||
                     element.startsWith("i") ||
                     element.startsWith("o") ||
@@ -35,10 +35,17 @@ public class StringPracticeQuestion2 {
                     element.startsWith("I") ||
                     element.startsWith("O") ||
                     element.startsWith("U")
-            ) {
+            ) */
+
+        for (String element : names) {
+            String temp = element.toLowerCase();
+            if (temp.startsWith("a") || temp.startsWith("e") || temp.startsWith("i")
+                    || temp.startsWith("o") || temp.startsWith("u")) {
                 count++;
+                System.out.println(temp);
                 System.out.println(element);
             }
+
         }
         System.out.println("count = " + count);
     }
